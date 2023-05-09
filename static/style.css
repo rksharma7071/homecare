@@ -1,0 +1,349 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-image: url('C:\Users\Akash Rajpoot\OneDrive\Documents\Major Project\frontend\featured-image-hire-an-electrician.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #242424;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    /* font-weight: bold; */
+    /* text-transform: uppercase; */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* CSS for Main Content */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+section {
+    width: 100%;
+    margin: 20px 0;
+}
+
+section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+section p {
+    font-size: 24px;
+    line-height: 1.5;
+    color: #555;
+    text-align: center;
+}
+
+section form {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+section input[type=text] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+section button[type=submit] {
+    background-color: #18bc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+section button[type=submit]:hover {
+    background-color: #149b7e;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section li {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+section a {
+    display: block;
+    text-decoration: none;
+}
+
+section img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+section h3 {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+
+/* CSS for Footer */
+
+
+/* CSS for Footer */
+
+footer {
+    background-color: #242424;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 16px;
+    margin: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* CSS for Buttons */
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+
+/* CSS for Headings */
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    /* CSS for Header and Navigation */
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav li {
+        margin: 10px 0;
+    }
+    /* CSS for Main Content */
+    main {
+        padding: 10px;
+    }
+    section li {
+        width: 100%;
+    }
+}
+
+.di {
+    margin-right: 50px;
+    padding-right: 25px;
+}
+
+#products-dropdown {
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    width: 800px;
+    max-width: 90%;
+    background-color: aliceblue;
+    /* Set any other styles based on your design */
+}
+
+a:hover+#products-dropdown,
+#products-dropdown:hover {
+    display: block;
+}
+
+.founder {
+    height: 150px;
+    border-radius: 50%;
+}
+
+.contactus {
+    padding-top: 30px;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+.service_img {
+    height: 150px;
+    border-radius: 5px;
+}
+
+.service_btn a {
+    display: inline-block;
+    background-color: #7c4dff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.service_btn a:hover {
+    background-color: #651fff;
+}
+
+.c_white {
+    background-color: #fff;
+}

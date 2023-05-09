@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+  <h2 class="pt-4">Contact Us</h2>
+  
+  <form action="" method="post" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+    {% csrf_token %}
+
+    {% if error == 'no' %}
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        Your Feedback Successfully Submitted.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    {% elif error == 'yes' %}
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        Please enter the correct detail.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    {% endif %}
+
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" required>
+    
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required></textarea>
+    
+    <input type="submit" value="Send">
+    
+  </form>
+
+
+
+  <script>
+
+      
+  </script>
+{% endblock content %}
+ 

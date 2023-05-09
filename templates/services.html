@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+{% block content %}
+
+<div class="container text-center rounded-3 " style="max-width: 1000px;">
+  <div class="row py-3 " ><h2 class="m-0 p-0">Available Services</h2></div>
+  <div class="row rounded-3 justify-content-center c_white" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); ">
+    <div class="col-md-6  p-3 service_btn">
+      <img src="{% static 'image/homecare_img.jpg' %}" class='service_img ' alt="Retesh Kumar Sharma">
+      <p class="h3 pt-3"><strong>Web Development</strong></p>
+      <p class="pb-3">Find experts in HTML, CSS, JavaScript, PHP, and more.</p>
+      <a href="#">Explore</a>
+    </div>
+    <div class="col-md-6 p-3 service_btn">
+      <img src="{% static 'image/homecare_img.jpg' %}" class='service_img' alt="Akash Rajpoot">
+      <p class="h3 pt-3"><strong>Graphic Design</strong></p>
+      <p class="pb-3">Hire designers for logos, banners, illustrations, and more.</p>
+      <a href="#">Explore</a>
+    </div>
+    <div class="col-md-6 p-3 service_btn">
+      <img src="{% static 'image/homecare_img.jpg' %}" class='service_img' alt="Himanshu Singh">
+      <p class="h3 pt-3"><strong>Digital Marketing</strong></p>
+      <p class="pb-3">Grow your business with SEO, social media, and PPC experts.</p>
+      <a href="#">Explore</a>
+    </div>
+    <div class="col-md-6 p-3 service_btn">
+        <img src="{% static 'image/homecare_img.jpg' %}" class='service_img' alt="Jitendre Singh">
+        <p class="h3 pt-3"><strong>Writing & Translation</strong></p>
+        <p class="pb-3">Get content writing, translation, editing, and proofreading services.</p>
+        <a href="#">Explore</a>
+    </div>
+    <div class="col-md-6 p-3 service_btn">
+        <img src="{% static 'image/homecare_img.jpg' %}" class='service_img' alt="Jitendre Singh">
+        <p class="h3 pt-3"><strong>Video & Animation</strong></p>
+        <p class="pb-3">Create explainer videos, animations, and motion graphics.</p>
+        <a href="#">Explore</a>
+    </div>
+    <div class="col-md-6 p-3 service_btn">
+        <img src="{% static 'image/homecare_img.jpg' %}" class='service_img' alt="Jitendre Singh">
+        <p class="h3 pt-3"><strong>Music & Audio</strong></p>
+        <p class="pb-3">Produce music, sound effects, and voiceovers for your projects.</p>
+        <a href="#">Explore</a>
+    </div>
+    
+  </div>
+</div>
+{% endblock content %}

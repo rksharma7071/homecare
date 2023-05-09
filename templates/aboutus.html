@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+{% block content %}
+  
+  <div class="container text-center rounded-3 py-4" style="max-width: 1000px;">
+    <div class="row pb-4"><h2 class="m-0 p-0">Our Team</h2></div>
+    <div class="row rounded-3 justify-content-center c_white" style="box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); ">
+      <div class="col-md-6  p-3 ">
+        <img src="{% static 'image/founder01.jpeg' %}" class='founder ' alt="Retesh Kumar Sharma">
+        <p class="h3 pt-3">Retesh Kumar Sharma</p>
+        <p class="pb-3">Co-founder | Backend Developer</p>
+      </div>
+      <div class="col-md-6 p-3 ">
+          <img src="{% static 'image/founder02.jpeg' %}" class='founder' alt="Akash Rajpoot">
+          <p class="h3 pt-3">Akash Rajpoot</p>
+          <p class="pb-3">Co-founder | Frontend Developer</p>
+      </div>
+      <div class="col-md-6 p-3 ">
+          <img src="{% static 'image/founder03.jpg' %}" class='founder' alt="Himanshu Singh">
+          <p class="h3 pt-3">Himanshu Singh</p>
+          <p class="pb-3">Co-founder | Graphic Designer</p>
+      </div>
+      <div class="col-md-6 p-3">
+          <img src="{% static 'image/founder04.jpg' %}" class='founder' alt="Jitendre Singh">
+          <p class="h3 pt-3">Jitendre Singh</p>
+          <p class="pb-3">Co-founder | Frontend Developer</p>
+      </div>
+      
+    </div>
+  </div>
+{% endblock content %}
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block header %}
+  <title>Home</title>
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  {% endblock header %}
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}"><i class="fa-solid fa-home me-2"></i> <strong>HOME CARE</strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+      
+<!--            <div class="mx-auto my-3 d-lg-none d-sm-block d-xs-block">-->
+<!--                <div class="input-group">-->
+<!--                    <span class="border-primary input-group-text bg-primary text-white"><i class="fa-solid fa-magnifying-glass"></i></span>-->
+<!--                    <input type="text" class="form-control border-primary" style="color:#7a7a7a">-->
+<!--                    <button class="btn btn-primary text-white">Search</button>-->
+<!--                </div>-->
+<!--            </div>-->
+          <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+            <div class="ms-auto d-none d-lg-block">
+<!--              <div class="input-group">-->
+<!--                <span class="border-primary input-group-text bg-primary text-white"><i class="fa-solid fa-magnifying-glass"></i></span>-->
+<!--                <input type="text" class="form-control border-primary" style="color:#7a7a7a">-->
+<!--                <button class="btn btn-primary text-white">Search</button>-->
+<!--              </div>-->
+            </div>
+            <ul class="navbar-nav ms-auto ">
+              <li class="nav-item">
+                <a class="nav-link mx-2 text-uppercase active" aria-current="page" href="{% url 'home' %}">Home</a>
+              </li>
+                <li class="nav-item">
+                <a class="nav-link mx-2 text-uppercase"  href="{% url 'offer' %}">Offers</a>
+              </li>
+              <li class="nav-item">
+                {% comment %} <a class="nav-link mx-2 text-uppercase" href="#">Products</a> {% endcomment %}
+                {% comment %} <a class="nav-link mx-2 text-uppercase" href="#" onmouseover="showDiv()" onmouseout="hideDiv()">Products</a> {% endcomment %}
+                <a class="nav-link mx-2 text-uppercase" href="#" onmouseover="showDiv()" onmouseout="hideDiv()">Products</a>
+                <div id="products-dropdown" class="shadow rounded" onmouseover="showDiv()" onmouseout="startHideTimer()">
+                  <section class="p-3">
+                    <h2>Popular Categories</h2>
+                    <ul>
+                        <li><a href="#" class="text-dark">Electrician</a></li>
+                        <li><a href="#" class="text-dark">Plumber</a></li>
+                        <li><a href="#" class="text-dark">Carpenter</a></li>
+                        <li><a href="#" class="text-dark">Painter</a></li>
+                        <li><a href="#" class="text-dark">Dish Connection</a></li>
+                        <li><a href="#" class="text-dark">Broadband Connection</a></li>
+                        <li><a href="#" class="text-dark">Pest Control Service</a></li>
+                        <li><a href="#" class="text-dark">Drainage Cleaning Services</a></li>
+                    </ul>
+                </section>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 text-uppercase" href="{% url 'catalog' %}">Catalog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 text-uppercase" href="{% url 'services' %}">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 text-uppercase" href="{% url 'aboutus' %}">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-2 text-uppercase" href="{% url 'contactus' %}">Contact Us</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto ">
+              {% comment %} <li class="nav-item">
+                <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-cart-shopping me-1"></i> Cart</a>
+              </li> {% endcomment %}
+              <li class="nav-item">
+                <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-circle-user me-1"></i> Account</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+    {% block content %}{% endblock content %}
+
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+
+    
+</body>
+</html>
