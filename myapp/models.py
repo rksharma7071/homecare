@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Contactus(models.Model):
@@ -12,10 +13,12 @@ class Contactus(models.Model):
     
 
 class Registration(models.Model):
+    USER = models.OneToOneField(User, on_delete=models.CASCADE)
     IMAGE = models.ImageField(upload_to='static/image/registration_images/')
     FULL_NAME = models.CharField(max_length=100)
     EMAIL = models.EmailField()
     PHONE_NUMBER = models.CharField(max_length=15)
+    ADDRESS = models.TextField()
     CITY = models.CharField(max_length=50)
     STATE_CHOICES = (
         ('Andaman and Nicobar', 'Andaman and Nicobar'),

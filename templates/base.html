@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm">
+    <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-white p-3">
         <div class="container">
             <a class="navbar-brand" href="{% url 'home' %}"><i class="fa-solid fa-home me-2"></i> <strong>HOME CARE</strong></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,14 +40,12 @@
               <li class="nav-item">
                 <a class="nav-link mx-2 text-uppercase active" aria-current="page" href="{% url 'home' %}">Home</a>
               </li>
-                <li class="nav-item">
-                <a class="nav-link mx-2 text-uppercase"  href="{% url 'offer' %}">Offers</a>
-              </li>
+                
               <li class="nav-item">
                 {% comment %} <a class="nav-link mx-2 text-uppercase" href="#">Products</a> {% endcomment %}
                 {% comment %} <a class="nav-link mx-2 text-uppercase" href="#" onmouseover="showDiv()" onmouseout="hideDiv()">Products</a> {% endcomment %}
                 <a class="nav-link mx-2 text-uppercase" href="#" onmouseover="showDiv()" onmouseout="hideDiv()">Products</a>
-                <div id="products-dropdown" class="shadow rounded" onmouseover="showDiv()" onmouseout="startHideTimer()">
+                <div id="products-dropdown" class="border rounded" onmouseover="showDiv()" onmouseout="startHideTimer()">
                   <section class="p-3">
                     <h2>Popular Categories</h2>
                     <ul>
@@ -63,9 +61,7 @@
                 </section>
                 </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link mx-2 text-uppercase" href="{% url 'catalog' %}">Catalog</a>
-              </li>
+             
               <li class="nav-item">
                 <a class="nav-link mx-2 text-uppercase" href="{% url 'services' %}">Services</a>
               </li>
@@ -76,13 +72,38 @@
                 <a class="nav-link mx-2 text-uppercase" href="{% url 'contactus' %}">Contact Us</a>
               </li>
             </ul>
-            <ul class="navbar-nav ms-auto ">
-              {% comment %} <li class="nav-item">
-                <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-cart-shopping me-1"></i> Cart</a>
-              </li> {% endcomment %}
+            <ul class="navbar-nav ms-5" style="margin-right:0px">
               <li class="nav-item">
-                <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-circle-user me-1"></i> Account</a>
+                {% if not user_logged_in %}
+                
+                <a class="nav-link text-uppercase" href="#" onmouseover="showDiv1()" onmouseout="hideDiv1()"><img src="{% static 'image/founder01.jpeg'%}" alt="User" height="40px" style="border-radius: 50%; margin-right: 10px;">Account</a>
+                <div id="products-dropdown1" class=" border  rounded" onmouseover="showDiv1()" onmouseout="startHideTimer1()" style="background-color: #fff;">
+                  <section class="">
+                    <ul class="products-dropdown1_ul text-center ">
+                        <li><a href="#" class="text-dark">SignIn</a></li>
+                        <li><a href="#" class="text-dark">SignUp</a></li>
+                        <li><a href="#" class="text-dark">SignOut</a></li>
+                    </ul>
+                  </section>
+                </div>
+                {% else %}
+                <li class="nav-item">
+                  <a class="nav-link mx-2 text-uppercase" href="{% url 'contactus' %}">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link mx-2 text-uppercase" href="{% url 'contactus' %}">Create Account</a>
+                </li>
+                {% endif %}
               </li>
+              {% comment %} <li class="nav-item">
+                <a class="nav-link mx-2 text-uppercase" href="#" onmouseover="showDiv2()" onmouseout="hideDiv2()"><i class="fa-solid fa-circle-user me-1"></i> Account</a>
+                <div class="border" id="products-dropdown1" onmouseover="showDiv2()" onmouseout="startHideTimer2()">
+                <ul class="account_ul" >
+                  <li>Sign In</li>
+                  <li>Sign Up</li>
+                </ul>
+              </div>
+              </li> {% endcomment %}
             </ul>
           </div>
         </div>

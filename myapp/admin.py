@@ -4,7 +4,7 @@ from .models import *
 
 @admin.register(Registration)
 class RegistrationAdmin(admin.ModelAdmin):
-    list_display = ('FULL_NAME', 'EMAIL', 'PHONE_NUMBER', 'CITY', 'STATE', 'TRADE','IMAGE')
+    list_display = ('USER', 'FULL_NAME', 'EMAIL', 'PHONE_NUMBER','ADDRESS', 'CITY', 'STATE', 'TRADE','IMAGE')
 # admin.site.register(Registration, RegistrationAdmin)
 
 

@@ -1,6 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 h1,
@@ -264,13 +265,33 @@ h3 {
     justify-content: center;
     width: 800px;
     max-width: 90%;
-    background-color: aliceblue;
-    /* Set any other styles based on your design */
+    background-color: #fff !important;
 }
 
 a:hover+#products-dropdown,
 #products-dropdown:hover {
     display: block;
+}
+
+#products-dropdown1 {
+    display: none;
+    position: fixed;
+    top: 23%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    width: 150px;
+    /* max-width: 90%; */
+    background-color: #fff !important;
+}
+
+a:hover+#products-dropdown1,
+#products-dropdown1:hover {
+    display: block;
+}
+
+.products-dropdown1_ul {
+    display: inline;
 }
 
 .founder {
