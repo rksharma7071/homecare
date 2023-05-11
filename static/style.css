@@ -13,7 +13,6 @@ h6,
 p {
     margin: 0px;
     padding: 0px;
-    text-align: center;
 }
 
 body {
@@ -93,7 +92,6 @@ section p {
     font-size: 24px;
     line-height: 1.5;
     color: #555;
-    text-align: center;
 }
 
 section form {
@@ -276,14 +274,42 @@ a:hover+#products-dropdown,
 #products-dropdown1 {
     display: none;
     position: fixed;
+    top: 250px;
+    left: 92%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    width: 180px;
+    max-width: 90%;
+    background-color: #fff !important;
+}
+
+.products-dropdown1_ul {
+    padding: 10px;
+}
+
+.products-dropdown1_ul li {
+    padding: 5px 5px;
+}
+
+a:hover+#products-dropdown,
+#products-dropdown:hover {
+    display: block;
+}
+
+
+/* 
+#products-dropdown1 {
+    display: none;
+    padding: 20px;
+    position: fixed;
     top: 23%;
     left: 90%;
     transform: translate(-50%, -50%);
     justify-content: center;
     width: 150px;
-    /* max-width: 90%; */
+    max-width: 90%;
     background-color: #fff !important;
-}
+} */
 
 a:hover+#products-dropdown1,
 #products-dropdown1:hover {

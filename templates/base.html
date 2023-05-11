@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-white p-3">
+    <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-white">
         <div class="container">
             <a class="navbar-brand" href="{% url 'home' %}"><i class="fa-solid fa-home me-2"></i> <strong>HOME CARE</strong></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -74,18 +74,21 @@
             </ul>
             <ul class="navbar-nav ms-5" style="margin-right:0px">
               <li class="nav-item">
-                {% if not user_logged_in %}
-                
+                {% if user.is_authenticated %}
                 <a class="nav-link text-uppercase" href="#" onmouseover="showDiv1()" onmouseout="hideDiv1()"><img src="{% static 'image/founder01.jpeg'%}" alt="User" height="40px" style="border-radius: 50%; margin-right: 10px;">Account</a>
                 <div id="products-dropdown1" class=" border  rounded" onmouseover="showDiv1()" onmouseout="startHideTimer1()" style="background-color: #fff;">
-                  <section class="">
-                    <ul class="products-dropdown1_ul text-center ">
-                        <li><a href="#" class="text-dark">SignIn</a></li>
-                        <li><a href="#" class="text-dark">SignUp</a></li>
-                        <li><a href="#" class="text-dark">SignOut</a></li>
+                    <ul class="products-dropdown1_ul">
+                        <li><a href="#" class="text-dark">Profile</a></li>
+                        <li><a href="#" class="text-dark">Post a Request</a></li>
+                        <li><a href="#" class="text-dark">Become a seller</a></li>
+                        <li><a href="#" class="text-dark">Settings</a></li>
+                        <li><a href="#" class="text-dark">Billing</a></li>
+                        <li><a href="#" class="text-dark">English</a></li>
+                        <li><a href="#" class="text-dark">INR</a></li>
+                        <li><a href="#" class="text-dark">Help & Support</a></li>
+                        <li><a href="#" class="text-dark">Logout</a></li>
                     </ul>
-                  </section>
-                </div>
+                 </div>
                 {% else %}
                 <li class="nav-item">
                   <a class="nav-link mx-2 text-uppercase" href="{% url 'contactus' %}">Login</a>
